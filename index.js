@@ -29,11 +29,11 @@ mongoose
 
   })
   .then((res) => {
-    console.log(res);
+    console.log(res.title);
     return Recipe.insertMany(data);
   })
   .then((res) => {
-    console.log(res);
+    console.log(res.title);
     return Recipe.findOneAndUpdate({title: 'Rigatoni alla Genovese'}, {duration: 100});
   })
   .then( (res) => {
